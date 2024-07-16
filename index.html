@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUDS</title>
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"/>
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </head>
+    <body>
+        <div class="header my-3">
+           <div class="container text-center">
+            <h1 class="text-uppercase mb-0">cruds</h1>
+            <h4 class="text-light text-uppercase " >create read update delete search</h4>
+           </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <div class="row r">
+                    <input type="text" placeholder="title" id="title" class="my-2">
+                    <div class="calc p-0">
+                        <input type="number" placeholder="price" min="0" id="price" class="my-2 " onkeyup="showtotal()">
+                        <input type="number" placeholder="taxes" id="taxes" class="my-2" onkeyup="showtotal()">
+                        <input type="number" placeholder="ads" id="ads" class="my-2" onkeyup="showtotal()">
+                        <input type="number" placeholder="discount" id="discount" class="my-2" onkeyup="showtotal()">
+                        <small id="small"></small>
+                    </div>
+                    <input type="number" placeholder="count" min="1" id="count" class="my-2">
+                    <input type="text" placeholder="category" id="category" class="my-2">
+                    <button class="btn btn-primary my-2" id="create" onclick="addproduct()">Create</button>
+                    <input type="text" placeholder="search by title" id="search" class="my-2" oninput="searchitem()">
+                    <div class="serchtype d-flex justify-content-between p-0">
+                        <button class="btn btn-primary w-45 my-2 " id="search by title" onclick="searchmode(this.id)">search by title</button>
+                        <button class="btn btn-primary w-45 my-2 "  id="search by category" onclick="searchmode(this.id)">search by category</button>
+                    </div>
+                    <button class="btn btn-primary w-100 mb-3" id="deleteall" onclick="delall()">DeleteAll</button>
+
+                </div>
+                <div class="row ">
+                        <div class="table-responsive">
+                            <table class="table table-striped tab ">
+                                <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">TITLE</th>
+                                    <th scope="col">PRICE</th>
+                                    <th scope="col">TAXES</th>
+                                    <th scope="col">ADS</th>
+                                    <th scope="col">DISCOUNT</th>
+                                    <th scope="col">TOTAL</th>
+                                    <th scope="col">CATEGORY</th>
+                                    <th scope="col">UPDATE</th>
+                                    <th scope="col">DELETE</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        <script src="javascript/main.js"></script>
+        <script src="javascript/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
